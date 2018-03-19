@@ -49,5 +49,7 @@ Rails.application.configure do
 
   # デバッグを行えるようにする。
   # https://qiita.com/osamu1203/items/c72a1b2c27ac3e02cb15
-  BetterErrors::Middleware.allow_ip! "192.168.33.1"  
+  BetterErrors::Middleware.allow_ip! "192.168.33.1"
+
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }  
 end

@@ -59,7 +59,7 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "skill_blog_#{Rails.env}"
+  # config.active_job.queue_name_prefix = "rails_template_#{Rails.env}"
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -83,4 +83,12 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+    # https://qiita.com/yuuna/items/9a2954300a130a9637b8
+  # nginxで見つからないとunicornにいちいち問い合わせがいくのでサーバーの負荷が劇的にあがってしまう。
+  config.serve_static_assets = false
+
+  # mailer setting
+  # FIXME: URLは適宜変更する
+  config.action_mailer.default_url_options = { host: 'http://www.xxx.com', port: 80 }
 end

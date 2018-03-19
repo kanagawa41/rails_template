@@ -13,3 +13,8 @@ bundle install --path vendor/bundle
 
 # server up
 bundle exec rails s -b 0.0.0.0 -p 8888
+
+# devise install
+$ rails g devise:install
+$ rails g devise:views
+$ rails g devise User
