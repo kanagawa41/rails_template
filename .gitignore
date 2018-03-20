@@ -50,5 +50,8 @@ bower.json
 # End of https://www.gitignore.io/api/rails
 
 # sublime temp-file
+.DS_Store
 ._*
+
+# my files
 _up.log

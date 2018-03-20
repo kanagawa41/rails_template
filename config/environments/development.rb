@@ -51,5 +51,7 @@ Rails.application.configure do
   # https://qiita.com/osamu1203/items/c72a1b2c27ac3e02cb15
   BetterErrors::Middleware.allow_ip! "192.168.33.1"
 
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }  
+  # mailer setting
+  config.action_mailer.default_url_options = { host: '192.168.33.10', port: 8080 }
+  config.action_mailer.delivery_method = :letter_opener_web
 end
