@@ -15,7 +15,4 @@ Rails.application.routes.draw do
 	}
 
   get 'home/index'
-  get 'home/after_login'
-  get 'home/after_logout'
-  get 'home/after_regist'
 end

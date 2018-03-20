@@ -35,6 +35,11 @@ module SkillBlog
     # タイムゾーンの設定
     config.time_zone = 'Tokyo'
 
+    # 使用言語
+    I18n.available_locales = %i(ja)
+    I18n.enforce_available_locales = true
+    I18n.default_locale = :ja
+
     # field_with_errorsの出力を制御する
     # https://qiita.com/youcune/items/76a50ae3a2863a8f8b00
     config.action_view.field_error_proc = Proc.new do |html_tag, instance|
